@@ -11,6 +11,7 @@ const avatarSelection = document.querySelector(".avatar-selection");
 let contacts = [];
 let selectedAvatar = null;
 
+//Validate form and add contact
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -29,6 +30,23 @@ addBtn.addEventListener("click", (e) => {
   }
 });
 
+function selectAvatar(e) {
+  const avatarElement = e.currentTarget;
+
+  const allAvatars = document.querySelectorAll(".avatar");
+
+  allAvatars.forEach((avatar) => {
+    avatar.setAttribute("aria-checked", "false");
+    avatar.classList.remove("selected");
+  });
+
+  avatarElement.setAttribute("aria-checked", "true");
+  avatarElement.classList.add("selected");
+  selectedAvatar = avatarElement.getAttribute("data-value");
+  console.log("Selected avatar:", selectedAvatar);
+}
+
+//Loop through all avatars and add event listener
 avatars.forEach((avatar) => {
   avatar.addEventListener("click", selectAvatar);
 });
@@ -54,22 +72,7 @@ function renderAvatars() {
 
 renderAvatars();
 
-function selectAvatar(e) {
-  const avatarElement = e.currentTarget;
-
-  const allAvatars = document.querySelectorAll(".avatar");
-
-  allAvatars.forEach((avatar) => {
-    avatar.setAttribute("aria-checked", "false");
-    avatar.classList.remove("selected");
-  });
-
-  avatarElement.setAttribute("aria-checked", "true");
-  avatarElement.classList.add("selected");
-  selectedAvatar = avatarElement.getAttribute("data-value");
-  console.log("Selected avatar:", selectedAvatar);
-}
-
+//Render contacts
 function renderContacts() {
   list.innerHTML = "";
 
@@ -101,6 +104,7 @@ function renderContacts() {
     const nameInput = item.querySelector(".list-name-input");
     const numberInput = item.querySelector(".list-number-input");
 
+    //Edit and delete event listeners
     editButton.addEventListener("click", () => {
       if (editIcon.classList.contains("fa-pen-to-square")) {
         nameInput.disabled = false;
