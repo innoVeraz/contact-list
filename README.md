@@ -53,4 +53,4 @@ Apply appropriate CSS to make the application look visually appealing and user-f
 - Responsive design.
 - Grid for contact list
 
-![app final look](assets/app.png)
+![app](assets/app.jpg)
