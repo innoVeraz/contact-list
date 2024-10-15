@@ -1,0 +1,214 @@
+body,
+html {
+  margin: 1rem 0 1rem 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #06394d;
+  padding: 2rem 5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  margin-top: 2rem;
+  font-weight: 300;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+}
+
+.form-button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #58c5d5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* contact list styles */
+
+.list-header {
+  margin-top: 2rem;
+  font-weight: 200;
+}
+
+.list-headers-left {
+  display: flex;
+  gap: 11rem;
+}
+
+.list-headers-right {
+  display: flex;
+  gap: 1rem;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.list-input-header-group {
+  width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-list-container {
+  width: 100%;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.list-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.list-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-list .edit,
+.contact-list .delete {
+  text-wrap: nowrap;
+  background-color: #bf8508;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.contact-list .delete {
+  background-color: #f85525;
+}
+
+.contact-list .edit:hover {
+  background-color: #bf8508;
+}
+
+.contact-list .delete:hover {
+  background-color: #c84922;
+}
+
+.contact-list input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.list-number-input {
+  width: 6rem;
+}
+
+input:disabled {
+  cursor: default;
+  background-color: #06394d;
+  color: white;
+  border: none;
+}
+
+/* avatar styles */
+
+.avatar-img {
+  width: 100px;
+  height: 100px;
+}
+
+.avatar-selection {
+  display: flex;
+  gap: 10px;
+}
+
+.avatar {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.avatar.selected {
+  border-color: #007bff;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
